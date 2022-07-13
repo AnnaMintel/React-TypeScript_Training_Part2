@@ -8,7 +8,7 @@ import { UncontrolledAccordion } from "./components/UncontrolledAccordion/Uncont
 import { ControlledOnOff } from "./components/ControlledOnOff /ControlledOnOff";
 import { UncontrolledOnOff } from "./components/UncontrolledOnOff/UncontrolledOnOff"
 import { Switcher } from "./components/switcher/switch";
-import { TrackValueOfUncontrolledInput, TrackValueOfUncontrolledInputByButtonPress, UncontrolledInput } from "./components/input/input";
+import { ControlledCheckbox, ControlledInput, ControlledSelect, TrackValueOfUncontrolledInput, TrackValueOfUncontrolledInputByButtonPress, UncontrolledInput } from "./components/input/input";
 
 const App = () => {
 
@@ -41,6 +41,16 @@ const App = () => {
       <br />
       <br />
       <TrackValueOfUncontrolledInputByButtonPress />
+      <br />
+      <br />
+      <br />
+      <ControlledInput />
+      <br />
+      <br />
+      <ControlledCheckbox />
+      <br />
+      <br />
+      <ControlledSelect />
     </div>
   );
 };
