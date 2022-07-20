@@ -1,5 +1,5 @@
-import React, { useState }  from "react";
-import logo from "./logo.svg"; 
+import React, { useState } from "react";
+import logo from "./logo.svg";
 import "./App.css";
 import { Raiting, RaitingValueType } from "./components/Rating/Rating";
 import { UncontrolledRaiting } from "./components/UncontrolledRating/UncontrolledRating";
@@ -17,13 +17,22 @@ const App = () => {
   let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
 
   const responseFromServer = Math.floor(Math.random() * 10) > 4 ? true : false;
+
+  const onClick = (value: any) => {
+    console.log(value)
+  }
+
   return (
     <div className={"App"}>
       <ControlledOnOff onOff={onOff} onClick={setOnOff} />
       <br />
       <UncontrolledOnOff />
       <br />
-      <Accordion title={"Menu"} collapsed={accordionCollapsed} onClick={setAccordionCollapsed} />
+      <Accordion title={"Menu"}
+        collapsed={accordionCollapsed}
+        onClick={setAccordionCollapsed}
+        clickHandler={onClick}
+        items={[{title: "Ann", value: 1}, {title: "HHAnn", value: 2}]}  />
       <br />
       <UncontrolledAccordion title={"Menu"} />
       <br />
