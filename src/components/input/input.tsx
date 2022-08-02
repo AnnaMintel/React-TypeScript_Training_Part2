@@ -50,7 +50,7 @@ export const ControlledSelect = () => {
     const onChange = (e: ChangeEvent<HTMLSelectElement>) => {
         setparentValue(e.currentTarget.value)
     }
-    return <select value={parentValue}>
+    return <select value={parentValue}> 
         <option value={"1"}>none</option>
         <option value={"2"}>Minsk</option>
         <option value={"3"}>Warshawa</option>

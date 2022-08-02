@@ -9,6 +9,7 @@ import { ControlledOnOff } from "./components/ControlledOnOff /ControlledOnOff";
 import { UncontrolledOnOff } from "./components/UncontrolledOnOff/UncontrolledOnOff"
 import { Switcher } from "./components/switcher/switch";
 import { ControlledCheckbox, ControlledInput, ControlledSelect, TrackValueOfUncontrolledInput, TrackValueOfUncontrolledInputByButtonPress, UncontrolledInput } from "./components/input/input";
+import { Select } from "./components/Select/Select";
 
 const App = () => {
 
@@ -60,6 +61,13 @@ const App = () => {
       <br />
       <br />
       <ControlledSelect />
+      <br />
+      <br />
+      <Select onChange={() => console.log("Value changed")}
+          value={"1"} 
+          items={[{value: 1, title: "Minsk"},
+          {value: 2, title: "Mi"},
+          {value: 3, title: "Msk"}]}/>
     </div>
   );
 };
