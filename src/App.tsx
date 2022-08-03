@@ -19,6 +19,9 @@ const App = () => {
 
   const responseFromServer = Math.floor(Math.random() * 10) > 4 ? true : false;
 
+  // select
+  const [value, setValue] = useState(null);
+
   const onClick = (value: any) => {
     console.log(value)
   }
@@ -53,7 +56,6 @@ const App = () => {
       <TrackValueOfUncontrolledInputByButtonPress />
       <br />
       <br />
-      <br />
       <ControlledInput />
       <br />
       <br />
@@ -63,11 +65,12 @@ const App = () => {
       <ControlledSelect />
       <br />
       <br />
-      <Select onChange={() => console.log("Value changed")}
-          value={"1"} 
+      <Select 
+          value={value} 
           items={[{value: 1, title: "Minsk"},
           {value: 2, title: "Mi"},
-          {value: 3, title: "Msk"}]}/>
+          {value: 3, title: "Msk"}]}
+          setValue={setValue}/>
     </div>
   );
 };

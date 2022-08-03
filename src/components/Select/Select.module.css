@@ -1,0 +1,22 @@
+.select span.main{
+    border: 1px solid black;
+    display: inline-block;
+    min-height: 20px;
+    min-width: 40px;
+    padding: 0 6px;
+}
+
+.items {
+    position: absolute;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.select.active .items {
+    display:block;
+}
+
+.itemHover:hover {
+    background-color: aqua;
+    cursor: pointer;
+}
