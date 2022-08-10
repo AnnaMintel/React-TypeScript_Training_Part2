@@ -1,4 +1,5 @@
 import React, { useReducer, useState } from "react";
+import { reducer, SWITCH_COLLAPSED } from "./reducer";
 import { UncontrolledAccordionBody } from "./UncontrolledAccordionBody";
 import { UncontrolledAccordionTitle } from "./UncontrolledAccordionTitle";
 
@@ -10,7 +11,7 @@ type AccordionType = {
 export const UncontrolledAccordion = (props: AccordionType) => {
   console.log("Accordion rendering")
 
-  let [collapsed, dispatch] = useReducer(reducer, false);
+  let [collapsed, dispatch] = useReducer(reducer, {collapsed: false});  
 
   const buttonSTyle = {
     width: "330px",
