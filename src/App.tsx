@@ -10,6 +10,7 @@ import { UncontrolledOnOff } from "./components/UncontrolledOnOff/UncontrolledOn
 import { Switcher } from "./components/switcher/switch";
 import { ControlledCheckbox, ControlledInput, ControlledSelect, TrackValueOfUncontrolledInput, TrackValueOfUncontrolledInputByButtonPress, UncontrolledInput } from "./components/input/input";
 import { Select } from "./components/Select/Select";
+import { Example1 } from "./components/React.memo/ReactMemo";
 
 const App = () => {
 
@@ -71,6 +72,10 @@ const App = () => {
           {value: 2, title: "Mi"},
           {value: 3, title: "Msk"}]}
           setValue={setValue}/>
+      <br/>
+      <br/>
+      <br/>
+      <Example1 />
     </div>
   );
 };
