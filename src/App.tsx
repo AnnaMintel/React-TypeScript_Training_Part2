@@ -11,6 +11,7 @@ import { Switcher } from "./components/switcher/switch";
 import { ControlledCheckbox, ControlledInput, ControlledSelect, TrackValueOfUncontrolledInput, TrackValueOfUncontrolledInputByButtonPress, UncontrolledInput } from "./components/input/input";
 import { Select } from "./components/Select/Select";
 import { Example1 } from "./components/React.memo/ReactMemo";
+import { Example2 } from "./components/Accordion/useMemo/ReactMemo";
 
 const App = () => {
 
@@ -76,6 +77,9 @@ const App = () => {
       <br/>
       <br/>
       <Example1 />
+      <br/>
+      <br/>
+      <Example2 />
     </div>
   );
 };
