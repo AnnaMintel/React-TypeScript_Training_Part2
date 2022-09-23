@@ -5,7 +5,6 @@ export default {
 }
 
 export const DifficultCountingExanple = () => {
-
     return <>
 
     </>
@@ -27,4 +26,5 @@ export const HelpsForREactMemo = () => {
         return tempResultA;
     }, [a]);
 }
+
 
