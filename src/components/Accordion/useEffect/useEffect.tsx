@@ -15,7 +15,7 @@ export const ExampleUseEffect = () => {
         console.log("useEffect every render");
         document.title = counter.toString();
     })
-    //2 - срабатывает только после первой отрисовки. После изменений в компаненте заново не срабатывает
+    //2 - срабатывает только после первой отрисовки. После изменений в компoненте заново не срабатывает
     // например, когда нам нужно через запрос на сервер отобразить юзеров
     useEffect(() => {
         console.log("useEffect only first render (analog componentDidMount)");
