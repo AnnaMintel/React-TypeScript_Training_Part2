@@ -12,7 +12,7 @@ import { ControlledCheckbox, ControlledInput, ControlledSelect, TrackValueOfUnco
 import { Select } from "./components/Select/Select";
 import { Example1 } from "./components/React.memo/ReactMemo";
 import { Example2 } from "./components/Accordion/useMemo/ReactMemo";
-import { ExampleUseEffect } from "./components/Accordion/useEffect/useEffect";
+import { ExampleUseEffect, SetTimeoutExample } from "./components/Accordion/useEffect/useEffect";
 
 const App = () => {
 
@@ -84,6 +84,9 @@ const App = () => {
       <br/>
       <br/>
       <ExampleUseEffect />
+      <br/>
+      <SetTimeoutExample />
+      <br/>
     </div>
   );
 };
