@@ -38,9 +38,6 @@ export const ExampleUseEffect = () => {
 export const SetTimeoutExample = () => {
 
     const [counter, setCounter] = useState<number>(1)
-
-    console.log("SetTimeoutExample ");
-
     //setTimeout
     useEffect(() => {
         setTimeout(() => {
@@ -53,13 +50,33 @@ export const SetTimeoutExample = () => {
     useEffect(() => {
         setInterval(() => {
             console.log("tick: " + counter);
-            setCounter((state) => state+1);
+            setCounter((state) => state + 1);
         }, 1000)
     }, [])
 
     return <>
         Hello, {counter}
         {/* <button onClick={() => setCounter(counter + 1)}>+++</button> */}
+    </>
+
+}
+
+export const ResetUseEffect = () => {
+    const [counter, setCounter] = useState<number>(1)
+
+console.log('component rendered')
+
+    useEffect(() => {
+        console.log('Effect happened')
+        //ф-я для сброса эффекта
+        return () => {
+            console.log('reset effect')
+        }
+    }, [])
+
+    return <>
+        Hello, counter: {counter}
+        <button onClick={() => {setCounter(counter+1)}}>+++</button>
     </>
 
 }
