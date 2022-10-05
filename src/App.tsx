@@ -40,7 +40,7 @@ const App = () => {
         collapsed={accordionCollapsed}
         onClick={setAccordionCollapsed}
         clickHandler={onClick}
-        items={[{title: "Ann", value: 1}, {title: "HHAnn", value: 2}]}  />
+        items={[{ title: "Ann", value: 1 }, { title: "HHAnn", value: 2 }]} />
       <br />
       <UncontrolledAccordion title={"Menu"} />
       <br />
@@ -69,28 +69,29 @@ const App = () => {
       <ControlledSelect />
       <br />
       <br />
-      <Select 
-          value={value} 
-          items={[{value: 1, title: "Minsk"},
-          {value: 2, title: "Mi"},
-          {value: 3, title: "Msk"}]}
-          setValue={setValue}/>
-      <br/>
-      <br/>
-      <br/>
+      <Select
+        value={value}
+        items={[{ value: 1, title: "Minsk" },
+        { value: 2, title: "Mi" },
+        { value: 3, title: "Msk" }]}
+        setValue={setValue} />
+      <br />
+      <br />
+      <br />
       <Example1 />
-      <br/>
-      <br/>
+      <br />
+      <br />
       <Example2 />
-      <br/>
-      <br/>
+      <br />
+      <br />
       <ExampleUseEffect />
-      <br/>
+      <br />
       <SetTimeoutExample />
-      <br/>
-      <br/>
+      <br />
+      <br />
       <h5>Clock:</h5>
-      <Clock />
+      <Clock mode={'analog'} />
+      <Clock mode={'digital'} />
     </div>
   );
 };

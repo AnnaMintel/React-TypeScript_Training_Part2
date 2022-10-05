@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
+import { AnalogClock } from "./AnalogClock";
+import { DigitalClock } from "./DigitalClock";
 
 type PropsType = {
-
+    mode?: 'digital' | 'analog'
+}
+export type ClockPropsType = {
+    data: Date
 }
 
-const get2DigitsString = (num: number) => num < 10 ? "0" + num : num
-
-export const Clock: React.FC<PropsType> = (props) => {
+export const Clock: React.FC<PropsType> = (props): any => {
 
     const [date, setDate] = useState(new Date())
 
     useEffect(() => {
-
-
         const intervalID = setInterval(() => {
             setDate(new Date());
         }, 1000);
@@ -22,11 +23,18 @@ export const Clock: React.FC<PropsType> = (props) => {
         }
     }, [])
 
-    return <div>
-        <span>{get2DigitsString(date.getHours())}</span>
-        :
-        <span>{get2DigitsString(date.getMinutes())}</span>
-        :
-        <span>{get2DigitsString(date.getSeconds())}</span>
-    </div>
+    if (props.mode === 'digital') {
+        //@ts-ignore
+        return <DigitalClock date={date} />
+    } else {
+        //@ts-ignore
+        return <AnalogClock date={date} />
+    }
+
+    // return <div>123</div>
+
+
 }
+
+
+
